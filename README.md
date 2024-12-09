@@ -13,22 +13,15 @@ The test pipeline is already set up for you. Follow these simple steps to run th
 The test failures are attributed to infrastructure issues, including endpoints returning 500 Internal Server Errors and some being inaccessible.
 All automation test scripts for the endpoints have been implemented, and successful execution of these tests is expected once the endpoints are functional.
 
-┌─────────────────────────┬────────────────────┬────────────────────┐
-│                         │           executed │             failed │
-├─────────────────────────┼────────────────────┼────────────────────┤
-│              iterations │                  1 │                  0 │
-├─────────────────────────┼────────────────────┼────────────────────┤
-│                requests │                 57 │                 14 │
-├─────────────────────────┼────────────────────┼────────────────────┤
-│            test-scripts │                 91 │                  0 │
-├─────────────────────────┼────────────────────┼────────────────────┤
-│      prerequest-scripts │                 63 │                  0 │
-├─────────────────────────┼────────────────────┼────────────────────┤
-│              assertions │                121 │                 37 │
-├─────────────────────────┴────────────────────┴────────────────────┤
-│ total run duration: 24.2s                                         │
-├───────────────────────────────────────────────────────────────────┤
-│ total data received: 29.01kB (approx)                             │
-├───────────────────────────────────────────────────────────────────┤
-│ average response time: 562ms [min: 42ms, max: 8.3s, s.d.: 1349ms] │
-└───────────────────────────────────────────────────────────────────┘
+|                          | Executed       | Failed         |
+|--------------------------|----------------|----------------|
+| Iterations               | 1              | 0              |
+| Requests                 | 57             | 14             |
+| Test Scripts             | 91             | 0              |
+| Prerequest Scripts       | 63             | 0              |
+| Assertions               | 121            | 37             |
+|--------------------------|----------------|----------------|
+| Total Run Duration       | 24.2s          |                |
+| Total Data Received      | 29.01 kB (approx) |             |
+| Average Response Time    | 562ms [min: 42ms, max: 8.3s, s.d.: 1349ms] |
+
