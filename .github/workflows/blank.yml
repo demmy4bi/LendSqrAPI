@@ -23,4 +23,4 @@ jobs:
       run: npm install -g newman
 
     - name: Run API Tests
-      run: newman run C:\LendSqr_Adjutor
+      run: newman run C:/LendSqr_Adjutor
