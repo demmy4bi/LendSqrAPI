@@ -30,6 +30,10 @@ jobs:
         -r cli,htmlextra \
         --reporter-htmlextra-export "testArtifacts/htmlreport.html"
 
+        - name: Create Test Artifacts Directory
+            run: mkdir -p testArtifacts
+
+
     - name: Upload Test Results
       uses: actions/upload-artifact@v3
       with:
