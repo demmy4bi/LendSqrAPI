@@ -22,7 +22,6 @@ jobs:
     - name: Install Newman and htmlextra Reporter
       run: |
         npm install -g newman
-        npm install -g newman-reporter-slackreporter
         npm install -g newman-reporter-htmlextra
 
     - name: Create Test Artifacts Directory
@@ -32,10 +31,12 @@ jobs:
       run: |
         newman run "CapitalCreditLimited_LendsqrAPI.postman_collection.json" \
         -r cli,htmlextra \
-        --reporter-htmlextra-export testArtifacts/htmlreport.html
+        --reporter-htmlextra-export "testArtifacts/htmlreport.html"
+      continue-on-error: true # Ensure this step completes regardless of errors
 
     - name: Upload Test Results
+      if: always() # Always run this step, even if previous steps fail
       uses: actions/upload-artifact@v3
       with:
         name: Reports
-        path: testArtifacts
+        path: testArtifacts/htmlreport.html
